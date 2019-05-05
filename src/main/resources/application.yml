@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    #   数据源基本配置
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/aaa?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:/mybatis/mapper/*.xml

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="layui.demo.dao.NavigationMapper">
+    <resultMap id="BaseResultMap" type="layui.demo.pojo.Navigation">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="pid" jdbcType="INTEGER" property="pid" />
+        <result column="descpt" jdbcType="VARCHAR" property="descpt" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+        <result column="del_flag" jdbcType="INTEGER" property="delFlag" />
+    </resultMap>
+
+
+    <select id="getnavigationListByPId" resultType="layui.demo.pojo.Navigation">
+        SELECT id,name,pid,url FROM base_admin_permission  WHERE pid = #{pid}
+    </select>
+
+    <select id="getNavigationByPid" resultType="layui.demo.pojo.Navigation">
+        SELECT * FROM base_admin_permission WHERE pid = 0;
+    </select>
+
+
+
+</mapper>
